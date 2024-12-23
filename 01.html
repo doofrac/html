@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doofrac - Fractional Ownership in Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008000',
+                        secondary: '#042759',
+                    },
+                    fontFamily: {
+                        'galano': ['Galano Grotesque', 'sans-serif'],
+                        'europa': ['Europa', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-galano {
+            font-family: 'Galano Grotesque', 'Inter', sans-serif;
+        }
+        .font-europa {
+            font-family: 'Europa', 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-primary">Doofrac</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="hover:text-primary transition">Home</a>
+                    <a href="#" class="hover:text-primary transition">How It Works</a>
+                    <a href="#" class="hover:text-primary transition">Properties</a>
+                    <a href="#" class="hover:text-primary transition">About Us</a>
+                    <a href="#" class="hover:text-primary transition">Blog</a>
+                    <a href="#" class="hover:text-primary transition">FAQ</a>
+                    <a href="#" class="hover:text-primary transition">Contact Us</a>
+                </div>
+                <button class="bg-primary text-white px-4 py-2 rounded hover:bg-green-600 transition">Login</button>
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="font-galano text-4xl md:text-5xl font-bold mb-4">Open a Doofrac account</h1>
+            <p class="font-europa text-xl mb-6">The best Fractional Ownership in Real Estate platform</p>
+            <p class="font-europa text-lg mb-8">Invest in Fractional Starting with ₹50,000 onwards.</p>
+            <div class="space-x-4">
+                <button class="bg-primary text-white px-6 py-3 rounded-full hover:bg-green-600 transition">Sign up for free</button>
+                <button class="bg-secondary text-white px-6 py-3 rounded-full hover:bg-blue-800 transition">Start Investing</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why invest with Doofrac? -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-galano text-3xl md:text-4xl font-bold text-center mb-12">Why invest with Doofrac?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <h3 class="font-galano text-xl font-semibold mb-2">Collect Rental Income</h3>
+                    <p class="font-europa">Earn consistent rental income from your ALT.SQFT</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <h3 class="font-galano text-xl font-semibold mb-2">Earn Long Term Gains</h3>
+                    <p class="font-europa">Watch your ALT.SQFT Real Estate investments appreciate over time</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <h3 class="font-galano text-xl font-semibold mb-2">Start Small</h3>
+                    <p class="font-europa">Start investing in real estate with as little as Rs. 50,000</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <h3 class="font-galano text-xl font-semibold mb-2">Diversify Investments</h3>
+                    <p class="font-europa">Your ALT.SQFT gives you the benefit of a diversified portfolio of properties</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <h3 class="font-galano text-xl font-semibold mb-2">Click to Sell</h3>
+                    <p class="font-europa">Easy to Buy and Sell ALT.SQFT whenever you want!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-galano text-3xl md:text-4xl font-bold text-center mb-12">Featured Properties</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="https://placehold.co/600x400" alt="Property 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-galano text-xl font-semibold mb-2">Luxury Apartment</h3>
+                        <p class="font-europa mb-4">Prime location with stunning views</p>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-green-600 transition">Learn More</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="https://placehold.co/600x400" alt="Property 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-galano text-xl font-semibold mb-2">Commercial Space</h3>
+                        <p class="font-europa mb-4">High-yield investment opportunity</p>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-green-600 transition">Learn More</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="https://placehold.co/600x400" alt="Property 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-galano text-xl font-semibold mb-2">Retail Complex</h3>
+                        <p class="font-europa mb-4">Strategic location for maximum returns</p>
+                        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-green-600 transition">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-galano text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">1</div>
+                    <h3 class="font-galano text-xl font-semibold mb-2">Sign Up</h3>
+                    <p class="font-europa">Create your free Doofrac account</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">2</div>
+                    <h3 class="font-galano text-xl font-semibold mb-2">Choose Property</h3>
+                    <p class="font-europa">Browse and select your investment</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">3</div>
+                    <h3 class="font-galano text-xl font-semibold mb-2">Invest</h3>
+                    <p class="font-europa">Purchase your fractional ownership</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">4</div>
+                    <h3 class="font-galano text-xl font-semibold mb-2">Earn</h3>
+                    <p class="font-europa">Receive rental income and capital appreciation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-galano text-2xl font-bold text-primary mb-4">Doofrac</h3>
+                    <p class="font-europa mb-4">Revolutionizing real estate investment through fractional ownership.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-galano text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="font-europa space-y-2">
+                        <li><a href="#" class="hover:text-primary transition">About Doofrac</a></li>
+                        <li><a href="#" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Privacy Statement</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-galano text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="font-europa space-y-2">
+                        <li><i class="fas fa-phone mr-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@doofrac.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-galano text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="font-europa mb-4">Stay updated with our latest offerings and news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r-md hover:bg-green-600 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+                <p class="font-europa">&copy; 2024 Doofrac. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

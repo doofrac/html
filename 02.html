@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doofrac - Fractional Ownership in Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008000',
+                        secondary: '#042759',
+                    },
+                    fontFamily: {
+                        'galano': ['Galano Grotesque', 'sans-serif'],
+                        'europa': ['Europa', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-galano {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        .font-europa {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-primary">Doofrac</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-primary transition">Home</a>
+                    <a href="#how-it-works" class="hover:text-primary transition">How It Works</a>
+                    <a href="#properties" class="hover:text-primary transition">Properties</a>
+                    <a href="#about" class="hover:text-primary transition">About Us</a>
+                    <a href="#faq" class="hover:text-primary transition">FAQ</a>
+                    <a href="#contact" class="hover:text-primary transition">Contact</a>
+                </div>
+                <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-green-600 transition">Login</button>
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="bg-gradient-to-r from-primary to-secondary text-white pt-24 pb-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="font-galano text-5xl md:text-6xl font-bold mb-6">Invest in Prime Real Estate</h1>
+            <p class="font-europa text-xl mb-8">Fractional ownership starting from just ₹50,000</p>
+            <div class="space-x-4">
+                <button class="bg-white text-primary px-8 py-3 rounded-full hover:bg-gray-100 transition">Sign Up Free</button>
+                <button class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-primary transition">Start Investing</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why Doofrac -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="font-galano text-4xl font-bold text-center mb-12">Why Choose Doofrac?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <i class="fas fa-money-bill-wave text-4xl text-primary mb-4"></i>
+                    <h3 class="font-galano text-2xl font-semibold mb-4">Passive Income</h3>
+                    <p class="font-europa">Earn consistent rental income from your fractional ownership in premium properties.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
+                    <h3 class="font-galano text-2xl font-semibold mb-4">Capital Appreciation</h3>
+                    <p class="font-europa">Benefit from long-term value growth in carefully selected real estate investments.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <i class="fas fa-shield-alt text-4xl text-primary mb-4"></i>
+                    <h3 class="font-galano text-2xl font-semibold mb-4">Low Risk</h3>
+                    <p class="font-europa">Diversify your portfolio across multiple properties to minimize investment risks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-galano text-4xl font-bold text-center mb-12">How It Works</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <h3 class="font-galano text-xl font-semibold mb-2">Sign Up</h3>
+                    <p class="font-europa">Create your free Doofrac account in minutes</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <h3 class="font-galano text-xl font-semibold mb-2">Choose Property</h3>
+                    <p class="font-europa">Browse our curated selection of premium properties</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <h3 class="font-galano text-xl font-semibold mb-2">Invest</h3>
+                    <p class="font-europa">Purchase fractional ownership with as little as ₹50,000</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                    <h3 class="font-galano text-xl font-semibold mb-2">Earn</h3>
+                    <p class="font-europa">Receive regular rental income and benefit from capital appreciation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="font-galano text-4xl font-bold text-center mb-12">Featured Properties</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://placehold.co/600x400" alt="Luxury Apartment" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-galano text-2xl font-semibold mb-2">Luxury Apartment</h3>
+                        <p class="font-europa mb-4">Prime location with stunning views</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">₹50,000 / fraction</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Invest Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://placehold.co/600x400" alt="Commercial Space" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-galano text-2xl font-semibold mb-2">Commercial Space</h3>
+                        <p class="font-europa mb-4">High-yield investment opportunity</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">₹75,000 / fraction</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Invest Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://placehold.co/600x400" alt="Retail Complex" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-galano text-2xl font-semibold mb-2">Retail Complex</h3>
+                        <p class="font-europa mb-4">Strategic location for maximum returns</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">₹100,000 / fraction</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Invest Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400" alt="About Doofrac" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="font-galano text-4xl font-bold mb-6">About Doofrac</h2>
+                    <p class="font-europa text-lg mb-6">Doofrac is revolutionizing real estate investment through fractional ownership. We make it possible for everyone to invest in premium properties with minimal capital, providing access to high-quality real estate assets that were previously out of reach for most investors.</p>
+                    <p class="font-europa text-lg mb-6">Our team of experts carefully selects each property, ensuring that our investors get the best possible returns on their investments. With Doofrac, you can build a diversified real estate portfolio and enjoy the benefits of property ownership without the hassles of management.</p>
+                    <button class="bg-primary text-white px-8 py-3 rounded-full hover:bg-green-600 transition">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="font-galano text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-galano text-xl font-semibold mb-4">What is fractional ownership?</h3>
+                    <p class="font-europa">Fractional ownership allows multiple investors to own a share of a high-value property, making real estate investment more accessible and affordable.</p>
+                </div>
+                <div>
+                    <h3 class="font-galano text-xl font-semibold mb-4">How do I earn returns?</h3>
+                    <p class="font-europa">You earn returns through regular rental income distributions and potential capital appreciation when the property value increases.</p>
+                </div>
+                <div>
+                    <h3 class="font-galano text-xl font-semibold mb-4">Is my investment secure?</h3>
+                    <p class="font-europa">Yes, your investment is secured by real property. We also implement strict legal and financial measures to protect our investors' interests.</p>
+                </div>
+                <div>
+                    <h3 class="font-galano text-xl font-semibold mb-4">Can I sell my fraction?</h3>
+                    <p class="font-europa">Yes, you can sell your fraction on our platform, subject to certain conditions and availability of buyers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-galano text-4xl font-bold mb-6">Start Your Real Estate Investment Journey Today</h2>
+            <p class="font-europa text-xl mb-8">Join thousands of investors who are already benefiting from fractional ownership</p>
+            <button class="bg-white text-primary px-8 py-3 rounded-full hover:bg-gray-100 transition text-lg font-semibold">Create Your Free Account</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer id="contact" class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-galano text-2xl font-bold mb-4">Doofrac</h3>
+                    <p class="font-europa mb-4">Revolutionizing real estate investment through fractional ownership.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-galano text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="font-europa space-y-2">
+                        <li><a href="#home" class="hover:text-primary transition">Home</a></li>
+                        <li><a href="#how-it-works" class="hover:text-primary transition">How It Works</a></li>
+                        <li><a href="#properties" class="hover:text-primary transition">Properties</a></li>
+                        <li><a href="#about" class="hover:text-primary transition">About Us</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-galano text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="font-europa space-y-2">
+                        <li><a href="#" class="hover:text-primary transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-galano text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="font-europa space-y-2">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Doofrac Street, Mumbai, India</li>
+                        <li><i class="fas fa-phone mr-2"></i> +91 123 456 7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@doofrac.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="font-europa">&copy; 2024 Doofrac. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
