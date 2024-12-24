@@ -16,7 +16,7 @@
     <link href="https://fonts.cdnfonts.com/css/galano-grotesque" rel="stylesheet">
     <link href="https://use.typekit.net/[YOUR-KIT-CODE].css" rel="stylesheet">
     <!-- Replace with your Europa font kit code -->
-
+<!-- 
     <style>
         @keyframes gradientAnimation {
             0% {
@@ -45,7 +45,7 @@
         .custom-text {
             font-family: 'Europa', sans-serif;
         }
-    </style>
+    </style> -->
 
     <script>
         tailwind.config = {
@@ -68,7 +68,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <img src="https://placehold.co/120x40?text=Doofrac" alt="Doofrac Logo" class="h-8">
+                    <img src="https://placehold.co/120x40?text=Doofrac+Logo" alt="Doofrac Logo" class="h-8">
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -105,8 +105,81 @@
         </div>
     </nav>
 
+
+    
+
+
+    <section class="relative h-screen overflow-hidden">
+        <div id="imageSlider" class="relative w-full h-full">
+            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+                <img src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?q=50&w=1920&h=1080" alt="Slide 1" class="object-cover w-full h-full">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center text-white px-5 py-7 backdrop-blur-sm rounded-xl">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Open a Doofrac Account</h1>
+                        <p class="text-xl md:text-2xl mb-8">The Best Fractional Ownership in Real Estate Platform</p>
+                        <p class="text-lg md:text-xl font-semibold mb-10">Invest in Fractional Starting with ₹50,000 onwards</p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <button class="px-10 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-blue-700">Sign Up for Free</button>
+                            <button class="px-10 py-3 border-2 border-white text-white rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black">Start Investing</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=50&w=1920&h=1080" alt="Slide 2" class="object-cover w-full h-full">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center text-white px-5 py-7 backdrop-blur-sm rounded-xl">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Diversify Your Portfolio</h1>
+                        <p class="text-xl md:text-2xl mb-8">Invest in Multiple Properties with Ease</p>
+                        <p class="text-lg md:text-xl font-semibold mb-10">Spread your risk across various real estate assets</p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <button class="px-10 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-blue-700">Explore Properties</button>
+                            <button class="px-10 py-3 border-2 border-white text-white rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                <img src="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?q=50&w=1920&h=1080" alt="Slide 3" class="object-cover w-full h-full">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center text-white px-5 py-7 backdrop-blur-sm rounded-xl">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Earn Passive Income</h1>
+                        <p class="text-xl md:text-2xl mb-8">Regular Returns from Your Real Estate Investments</p>
+                        <p class="text-lg md:text-xl font-semibold mb-10">Start earning from day one of your investment</p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <button class="px-10 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-blue-700">Calculate Returns</button>
+                            <button class="px-10 py-3 border-2 border-white text-white rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black">Invest Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="prevSlide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button id="nextSlide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
     <!-- Hero Section -->
-    <!-- <section class="pt-32 pb-20 animated-gradient">
+    <!-- 
+
+    <section class="pt-32 pb-20 animated-gradient">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="custom-heading text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-6">
@@ -128,11 +201,13 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section> 
+    
+    -->
 
 
     <!-- Updated Section B -->
-<section class="relative overflow-hidden bg-gradient-to-b from-green-50 via-transparent to-transparent pb-12 pt-20 sm:pb-16 sm:pt-32 lg:pb-24 xl:pb-32 xl:pt-40">
+<!-- <section class="relative overflow-hidden bg-gradient-to-b from-green-50 via-transparent to-transparent pb-12 pt-20 sm:pb-16 sm:pt-32 lg:pb-24 xl:pb-32 xl:pt-40">
     <div class="relative z-10">
         <div class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
             <svg class="h-[60rem] w-[100rem] flex-none stroke-green-600 opacity-20" aria-hidden="true">
@@ -169,11 +244,8 @@
                 </button>
             </div>
         </div>
-        <!-- <div class="relative mx-auto mt-10 max-w-lg">
-            <img class="w-full rounded-2xl border border-gray-100 shadow" src="https://images.unsplash.com/photo-1587502536575-6dfba0a6e017" alt="">
-        </div> -->
     </div>
-</section>
+</section> -->
 
     
 
@@ -1335,6 +1407,35 @@
 
 
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            const $slides = $('#imageSlider > div');
+            let currentSlide = 0;
+            const slideCount = $slides.length;
+
+            function showSlide(index) {
+                $slides.removeClass('opacity-100').addClass('opacity-0');
+                $slides.eq(index).removeClass('opacity-0').addClass('opacity-100');
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                showSlide(currentSlide);
+            }
+
+            $('#nextSlide').click(nextSlide);
+            $('#prevSlide').click(prevSlide);
+
+            setInterval(nextSlide, 6000); // Change slide every 6 seconds
+        });
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
