@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Investment Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1E2F97',
+                        'secondary': '#4CAF50'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .active-tab {
+            border-bottom: 2px solid #1E2F97;
+            color: #1E2F97;
+            font-weight: 500;
+        }
+        .thumbnail-active {
+            border: 2px solid #1E2F97;
+        }
+        .progress-bar {
+            background: linear-gradient(to right, #4CAF50 95%, #e5e7eb 95%);
+        }
+        /* Scrollbar Styles */
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 6px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Left Column - Image Gallery -->
+            <div class="lg:col-span-8 order-2 lg:order-1">
+                <div class="grid grid-cols-12 gap-4">
+                    <!-- Thumbnails -->
+                    <div class="col-span-12 lg:col-span-2 order-2 lg:order-1">
+                        <div class="flex lg:block overflow-x-auto lg:overflow-y-auto lg:h-[500px] lg:pr-2 space-x-2 lg:space-x-0 lg:space-y-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                            <img src="https://placehold.co/250x250?text=Image+01" alt="Thumbnail 1" class="thumbnail w-full aspect-square object-cover rounded-lg cursor-pointer thumbnail-active"/>
+                            <img src="https://placehold.co/250x250?text=Image+02" alt="Thumbnail 2" class="thumbnail w-full aspect-square object-cover rounded-lg cursor-pointer"/>
+                            <img src="https://placehold.co/250x250?text=Image+03" alt="Thumbnail 3" class="thumbnail w-full aspect-square object-cover rounded-lg cursor-pointer"/>
+                            <img src="https://placehold.co/250x250?text=Image+04" alt="Thumbnail 4" class="thumbnail w-full aspect-square object-cover rounded-lg cursor-pointer"/>
+                            <img src="https://placehold.co/250x250?text=Image+05" alt="Thumbnail 5" class="thumbnail w-full aspect-square object-cover rounded-lg cursor-pointer"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Image -->
+                    <div class="col-span-12 lg:col-span-10 order-1 lg:order-2 relative">
+                        <div class="absolute top-4 left-4 z-10">
+                            <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-4 py-2 rounded-lg">
+                                Fractional Investment
+                            </div>
+                        </div>
+                        <img id="mainImage" src="https://placehold.co/250x250?text=Image+01" alt="Property View" class="w-full h-[500px] object-cover rounded-lg"/>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="mt-6">
+                    <div class="border-b">
+                        <div class="flex space-x-8">
+                            <button class="tab-btn active-tab px-2 py-4 text-sm">Investment Thesis</button>
+                            <button class="tab-btn px-2 py-4 text-sm text-gray-600">Overview</button>
+                            <button class="tab-btn px-2 py-4 text-sm text-gray-600">Location</button>
+                            <button class="tab-btn px-2 py-4 text-sm text-gray-600">Site Plan</button>
+                            <button class="tab-btn px-2 py-4 text-sm text-gray-600">Price</button>
+                            <button class="tab-btn px-2 py-4 text-sm text-gray-600">Calculator</button>
+                            <button class="tab-btn px-2 py-4 text-sm text-gray-600">Resources</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Property Details -->
+            <div class="lg:col-span-4 order-1 lg:order-2">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h1 class="text-2xl font-bold text-primary mb-4">Pune Industrial Opportunity - 1</h1>
+                    
+                    <div class="flex items-center gap-3 mb-4">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        </svg>
+                        <span class="text-gray-900 font-bold">Hinjewadi</span>
+                        <span class="text-gray-600 font-bold">79,845 sqft</span>
+                    </div>
+
+                    <div class="mb-6">
+                        <span class="bg-secondary/10 text-secondary px-4 py-1 rounded-full text-sm font-medium">
+                            Open
+                        </span>
+                    </div>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-gray-600">Min Investment</span>
+                            </div>
+                            <span class="font-medium text-gray-900">₹30 Lakhs</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                </svg>
+                                <span class="text-gray-600">Gross Entry Yield</span>
+                            </div>
+                            <span class="font-medium text-gray-900">8.1%</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                </svg>
+                                <span class="text-gray-600">Target IRR</span>
+                            </div>
+                            <span class="font-medium text-gray-900">13%</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+                                </svg>
+                                <span class="text-gray-600">Target Multiple</span>
+                            </div>
+                            <span class="font-medium text-gray-900">1.6x</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-start text-sm">
+                            <span class="font-medium">&#8377; 37,10,00,000 &nbsp; </span>
+                            <span class="text-gray-600">Funded of</span>
+                            <span class="font-medium">&nbsp; &#8377; 39,20,00,000</span>
+                        </div>
+                        <div class="w-full h-2 rounded-full progress-bar"></div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-secondary font-medium">95%</span>
+                            <button class="flex items-center text-gray-600 text-sm">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                Disclaimer
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-primary text-white py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium">
+                        Invest Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Handle thumbnail clicks
+            $('.thumbnail').click(function() {
+                $('.thumbnail').removeClass('thumbnail-active');
+                $(this).addClass('thumbnail-active');
+                $('#mainImage').attr('src', $(this).attr('src'));
+            });
+
+            // Handle tab clicks
+            $('.tab-btn').click(function() {
+                $('.tab-btn').removeClass('active-tab').addClass('text-gray-600');
+                $(this).addClass('active-tab').removeClass('text-gray-600');
+            });
+        });
+    </script>
+</body>
+</html>
+
